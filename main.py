@@ -1,4 +1,3 @@
-import webbrowser
 import pyautogui as pt
 from pyautogui import *
 from pyperclip import *
@@ -10,7 +9,6 @@ def _work_write(text):
     pc.copy(text)
     pt.hotkey('ctrl', 'v')
     pc.copy('')
-
 
 # vérifie l'image a 80% 'confidence=.8' .
 def nav_to_imgage(image, clicks, off_x=0, off_y=0):
@@ -37,7 +35,6 @@ def more_precise(image, clicks, off_x=0, off_y=0):
         pt.moveTo(position, duration=.1)
         pt.moveRel(off_x, off_y, duration=.1)
         pt.click(clicks=clicks, interval=.3)
-
 
 def question():
     global webbrowser, identifiant, mdp
